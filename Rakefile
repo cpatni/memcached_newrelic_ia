@@ -5,8 +5,8 @@ require File.dirname(__FILE__) + '/lib/newrelic_ia'
 
 GEM_NAME = "newrelic_ia"
 GEM_VERSION = NewRelic::IA::VERSION
-AUTHOR = "Bill Kayser"
-EMAIL = "bkayser@newrelic.com"
+AUTHOR = ["Bill Kayser", "Chandra Patni", "Tony Ford"]
+EMAIL = ["bkayser@newrelic.com", "cpatni@ign.com", "aford@ign.com"]
 HOMEPAGE = "http://www.newrelic.com"
 SUMMARY = "New Relic Gem for gathering system metrics"
 DESCRIPTION = <<EOF
@@ -40,4 +40,3 @@ Echoe.new('newrelic_ia', NewRelic::IA::VERSION) do |p|
 end
 
 Dir['tasks/**/*.rake'].each { |t| load t }
-
