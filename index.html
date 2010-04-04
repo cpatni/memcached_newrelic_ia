@@ -18,12 +18,12 @@
       margin: 0 auto;
       width: 700px;
     }
-		h1 { font-size: 3.8em; color: #883322; margin-bottom: 3px; }
+		h1 { font-size: 3.8em; color: #aa4444; margin-bottom: 3px; }
 		h1 .small { font-size: 0.4em; }
 		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #883322; }
-    h3 { text-align: center; color: #883322; }
-    a { color: #883322; }
+		h2 { font-size: 1.5em; color: #aa4444; }
+    h3 { text-align: center; color: #aa4444; }
+    a { color: #aa4444; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
 		pre { background: #000; color: #fff; padding: 15px;}
@@ -53,28 +53,39 @@
 to your RPM console which can be viewed with custom dashboards.
     </div>
 
-    <p>memcached_newrelic_ia collects memcached, disk, cpu and IO statistics.  Collected stats are sent to the New Relic RPM application.
+	    <p>memcached_newrelic_ia collects memcached, disk, cpu and IO statistics.  Collected stats are sent to the New Relic RPM application.
 
-Memcached statistics sampler collects subset of stats provided by memcached daemon.  In addition it computes other stats dervied from memcached stats. Also support stats
-derivatives over time to compute rate etc. </p><h2>Dependencies</h2>
-<p>* New Relic Agent version 2.9.2 or later
-* Gold Subscription for creating and viewing custom dashboards</p>
+	Memcached statistics sampler collects subset of stats provided by memcached daemon.  In addition it computes other stats dervied from memcached stats. Also support stats
+	derivatives over time to compute rate etc. </p>
+	<div class="screenshots">
+	  <img src="images/newrelic-memcached-dashboard-screenshot.png" alt="Newrelic memcached dashborad screenshot"/>
+	</div>
+
+<h2>Dependencies</h2>
+<p><ul>
+	<li>New Relic Agent version 2.9.2 or later</li>
+    <li>Gold Subscription for creating and viewing custom dashboards
+	</li>
+	</p>
 <h2>Install</h2>
-<p>    sudo gem install newrelic_ia
+<p>    
+	<pre>sudo gem install newrelic_ia</pre>
 
 Once installed, run from the home directory of your Rails 
 application, or create a separate working directory and run
 
-    newrelic_ia --install
+    <pre>newrelic_ia --install</pre>
 
-to create a template newrelic.yml file you can use.  Edit this file
+to create a template <code>newrelic.yml</code> file you can use.  Edit this file
 and substitute your license key and app_name value.
 
 specify memcached nodes in memcached-nodes.txt. </p>
 <h2>License</h2>
 <p>(The MIT License)</p>
 <h2>Authors</h2>
-<p>Bill Kayser<br/>Chandra Patni<br/>Tony Ford</p>
+<p>Bill Kayser
+<br/>Chandra Patni
+<br/>Tony Ford</p>
 
 
     <h2>Download</h2>
