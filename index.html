@@ -51,15 +51,18 @@
       <span class="small">by <a href="http://github.com/rubyorchard">rubyorchard</a></span></h1>
 
     <div class="description">
-      New Relic Memcached Infrastructure Agent. Use this gem to collect statistics from a given host by running <code>newrelic_ia -a</code> as a daemon.  This will contribute System/* metrics
-to your RPM console which can be viewed with custom dashboards.
+      New Relic Memcached Infrastructure Agent. Use this gem to collect stats from a configured set of memcached nodes.  
+      This will contribute System/MemcachedAgg/* and System/Memcached/host_port/* metrics to your RPM console which can be 
+      viewed with custom dashboards. 
     </div>
 
 	    <p>memcached_newrelic_ia collects memcached statistics.  Collected stats are sent to the New Relic RPM application.
 
-	Memcached statistics sampler collects subset of stats provided by memcached daemon.  In addition it computes other stats dervied from memcached stats. Also support stats
-	derivatives over time to compute rate etc. </p>
+	Memcached statistics sampler collects subset of stats provided by memcached daemon.  
+	In addition it computes other stats dervied from memcached stats. Also supports 
+	time derivatives stats such as rpm and other rates.</p>
 	<div class="screenshots">
+	  The code for sample dashboard is in <code>dashboard.liquid</code>
 	  <img src="images/newrelic-memcached-dashboard-screenshot.png" alt="Newrelic memcached dashborad screenshot"/>
 	</div>
 
@@ -81,13 +84,18 @@ application, or create a separate working directory and run
 to create a template <code>newrelic.yml</code> file you can use.  Edit this file
 and substitute your license key and app_name value.
 
-specify memcached nodes in memcached-nodes.txt. </p>
+specify memcached nodes in <code>memcached-nodes.txt</code> and run</p>
+
+<pre>newrelic_ia memcached</pre>
+
 <h2>License</h2>
 <p>(The MIT License)</p>
 <h2>Authors</h2>
-<p>Bill Kayser
-<br/>Chandra Patni
-<br/>Tony Ford</p>
+<p>
+	Chandra Patni<br/>
+	Bill Kayser<br/>
+	Tony Ford
+</p>
 
 
     <h2>Download</h2>
